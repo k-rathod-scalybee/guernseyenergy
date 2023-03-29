@@ -1065,6 +1065,9 @@ header.fixed-top {
 }
 
 @media (max-width: 767px) {
+  body {
+    word-wrap: break-word;
+  }
   .text-sm { font-size: 15px; }
   .small { font-size: 14px; }
   .form-control { font-size: 1rem; }

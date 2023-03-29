@@ -1067,6 +1067,18 @@ header.fixed-top {
 @media (max-width: 767px) {
   .text-sm { font-size: 15px; }
   .small { font-size: 14px; }
+  .form-control { font-size: 1rem; }
+  .forgot-pass, label { font-size: 1rem; }
+  h5 {
+    font-size: 1.5rem;
+  }
+  .btn {
+    font-size: 1.1rem;
+  }
+  .btn-sm {
+    font-size: 0.9rem;
+  }
+
   /* Header CSS */
 
   /* Authentication CSS */
@@ -1083,6 +1095,9 @@ header.fixed-top {
   .ge-header__top__links li:not(:last-child),
   .ge-header__actions li a:after {
     display: none;
+  }
+  .ge-header__actions li a {
+    font-size: 0.8rem;
   }
   /* Header Top CSS */
 
@@ -1103,6 +1118,9 @@ header.fixed-top {
   .ge-header__main .navbar-collapse {
     position: absolute;
     top: 100%;
+  }
+  .ge-header__menu .nav-item .nav-link {
+    font-size: 1.1rem;
   }
   /* Header Menu CSS */
 

@@ -1230,6 +1230,10 @@ header.fixed-top {
   }
 }
 @media (max-width: 360px) {
+  .ge__account__hero__actions li:not(:last-child) {
+    margin-right: 6px;
+  }
+
   /* Account Page CSS */
   .notification-dropdown-menu {
     width: 20rem;

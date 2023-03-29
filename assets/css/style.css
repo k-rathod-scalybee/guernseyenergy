@@ -1005,6 +1005,10 @@ header.fixed-top {
   /* Header Menu CSS */
   .ge-header__main {
     padding: 0;
+    position: relative;
+  }
+  .ge-header__menu .navbar {
+    position: static;
   }
   .ge-header__main .col-md-8 {
     width: 10.714rem;
@@ -1232,10 +1236,18 @@ header.fixed-top {
     height: 100%;
   }
 }
+@media (max-width: 480px) {
+  /* Header CSS */
+  .ge-header__top li a {
+    padding: 0.5rem 0.8rem;
+  }
+  /* Header CSS */
+}
 @media (max-width: 360px) {
   .ge__account__hero__actions li:not(:last-child) {
     margin-right: 6px;
   }
+
 
   /* Account Page CSS */
   .notification-dropdown-menu {
@@ -1243,5 +1255,11 @@ header.fixed-top {
     padding: 1rem 1.2rem;
   }
   /* Account Page CSS */
+
+  /* Footer CSS */
+  .footer {
+    padding: 5rem 0;
+  }
+  /* Footer CSS */
 }
 /* Responsive CSS */

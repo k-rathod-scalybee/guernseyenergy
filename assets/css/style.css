@@ -1162,12 +1162,24 @@ header.fixed-top {
     width: 25rem;
     padding: 1.8rem 1.4rem;
   }
+  .notification-dropdown-menu .notification-menu-list .dropdown-item {
+    flex-direction: column;
+  }
   .notification-menu-list .dropdown-item a {
     width: 75%;
   }
-  .notification-dropdown-menu .notification-time {
+  .dropdown-item .notification-time {
     width: 25%;
     margin-left: 2rem;
+  }
+  .notification-dropdown-menu .notification-time {
+    width: 100%;
+    justify-content: flex-end;
+    margin-left: auto;
+    border-left: none;
+    margin-top: 0.6rem;
+    max-width: 100%;
+    font-size: 0.9rem;
   }
   /* Account Page CSS */
 

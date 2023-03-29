@@ -1065,10 +1065,15 @@ header.fixed-top {
 }
 
 @media (max-width: 767px) {
-  html { font-size: 17px; }
   .text-sm { font-size: 15px; }
   .small { font-size: 14px; }
   /* Header CSS */
+
+  /* Authentication CSS */
+  .ge-authentication__box {
+    padding: 1.5rem;
+  }
+  /* Authentication CSS */
 
   /* Header Top CSS */
   .ge-header__top {

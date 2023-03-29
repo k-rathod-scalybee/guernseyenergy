@@ -250,6 +250,10 @@ label small {
 .notification-search .search-control::placeholder {
   color: var(--dark-grey-color);
 }
+.ge__error img {
+  width: 1.053rem;
+  height: 1.053rem;
+}
 
 /* Colors */
 .text--dark {
@@ -1073,6 +1077,10 @@ header.fixed-top {
     word-wrap: break-word;
   }
   .text-sm { font-size: 15px; }
+  .ge__error img {
+    width: 1.1rem;
+    height: 1.1rem;
+  }
   .small { font-size: 14px; }
   .form-control { font-size: 1rem; }
   .forgot-pass, label { font-size: 1rem; }

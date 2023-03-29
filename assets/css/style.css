@@ -1065,7 +1065,7 @@ header.fixed-top {
 }
 
 @media (max-width: 767px) {
-  html { font-size: 19px; }
+  html { font-size: 17px; }
   /* Header CSS */
 
   /* Header Top CSS */

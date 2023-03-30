@@ -1140,6 +1140,7 @@ header.fixed-top {
   }
   .ge-header__menu .nav-item .nav-link {
     font-size: 1.1rem;
+    display: inline-block;
   }
   /* Header Menu CSS */
 

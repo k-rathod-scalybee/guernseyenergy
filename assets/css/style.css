@@ -1196,7 +1196,7 @@ header.fixed-top {
   }
   .dropdown-item .notification-time {
     width: 25%;
-    margin-left: 2rem;
+    margin-left: 1rem;
   }
   .notification-dropdown-menu .notification-time {
     width: 100%;

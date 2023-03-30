@@ -1104,6 +1104,9 @@ header.fixed-top {
   .ge-authentication__box {
     padding: 1.5rem;
   }
+  .ge__signin__icon {
+    margin-top: -3.2rem;
+  }
   /* Authentication CSS */
 
   /* Header Top CSS */

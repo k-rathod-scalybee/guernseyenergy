@@ -747,6 +747,7 @@ header.fixed-top {
   font-size: 0.947rem;
   padding: 0.526rem;
   line-height: 1;
+  z-index: 1;
 }
 .ge__offer__product__info {
   position: absolute;

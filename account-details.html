@@ -199,11 +199,37 @@
                 <a href="./account.html" class="go-back text--dark mb-2 d-inline-block"><img class="me-1 in-svg" src="./assets/images/icons/arrow-prev.svg" alt="Back"> Account home</a>
                 <h2 class="mb-5">Account details</h2>
                 <div class="ge__alert ge__alert-small ge__alert--success bg--dark-green d-inline-block text-white duplicate-soft-medium text-sm">Your details have been updated <a href="#"><img class="ms-3" src="./assets/images/icons/x.svg" alt="X"></a></div>
-                <div class="row">
+
+                <div class="row mb-5">
                     <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="ge__account__detail__box mb-4 mb-sm-0 d-flex flex-column justify-content-between ge-rounded bg-white p-4">
+                        <div class="ge__account__detail__box mb-4 mb-md-0 d-flex flex-column justify-content-between ge-rounded bg-white p-4">
+                            <table class="table-sm">
+                                <tbody>
+                                    <tr>
+                                        <th class="duplicate-soft-medium text-dark-grey text-sm">Account holder</th>
+                                        <td class="text-sm duplicate-soft-medium text-end">Luke Carré</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="duplicate-soft-medium text-dark-grey text-sm">Account number</th>
+                                        <td class="text-sm duplicate-soft-medium text-end">0872929</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <ul class="list-unstyled mt-3 mb-0">
+                                <li>
+                                    <a href="#" class="green--link text-sm">Transfer ownership</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="mb-4">Personal Details</h3>
+                <div class="row mb-5">
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="ge__account__detail__box mb-4 mb-md-0 d-flex flex-column justify-content-between ge-rounded bg-white p-4">
                             <div class="ge__account__detail__box__info">
-                                <h4 class="mb-4">Your details</h4>
+                                <h4 class="mb-4">Customer details</h4>
                                 <ul class="list-unstyled mb-0">
                                     <li><a class="text-dark-grey text-sm" href="#">Luke Carré</a></li>
                                     <li><a class="text-dark-grey text-sm" href="mailto:luke@wearebwi.com">luke@wearebwi.com</a></li>
@@ -212,19 +238,121 @@
                             </div>
                             <ul class="ge__account__detail__box__actions list-unstyled mt-5 mb-0">
                                 <li>
-                                    <a href="./account-details-edit.html" class="text--dark-green text-sm">Edit details</a>
+                                    <a href="./account-details-edit.html" class="green--link text-sm">Edit details</a>
                                 </li>
                                 <li>
-                                    <a href="./change-password.html" class="text--dark-green text-sm">Change password</a>
+                                    <a href="./change-password.html" class="green--link text-sm">Change password</a>
                                 </li>
                                 <li>
-                                    <a href="./newsletter.html" class="text--dark-green text-sm">Marketing preferences</a>
+                                    <a href="#" class="green--link text-sm">Edit newsletter subscriptions</a>
                                 </li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="ge__account__detail__box mb-4 mb-sm-0 d-flex flex-column justify-content-between ge-rounded bg-white p-4">
+                        <div class="ge__account__detail__box ge__account__cta bg--light-green mb-4 mb-md-0  d-flex flex-column justify-content-between ge-rounded position-relative p-4">
+                            <div class="ge__account__detail__box__info">
+                                <h6 class="text-uppercase text-xs mb-2">Get connected</h6>
+                                <h3 class="mb-4">Switch from oil to gas and we’ll remove your old oil tank or boiler for free.</h3>
+                            </div>
+                            <div class="ge__account__detail__box__actions">
+                                <a href="#" class="btn btn-sm btn-white">Switch from oil to gas</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="ge__account__detail__box gradient-border-box bg-white ge-rounded p-4">
+                            <div class="d-flex mb-4">
+                                <img class="me-3" src="./assets/images/icons/logo-gradient-shape.svg" width="42" height="54" alt="Shape">
+                                <h5 class="mb-0">Are you a Guernsey Energy customer?</h5>
+                            </div>
+                            <p class="text-dark-grey text-sm">Add your <span class="duplicate-soft-medium">account number</span> and you’ll soon get access to <span class="duplicate-soft-medium">manage your bills, extras and energy,</span> all on one account. </p>
+                            <div class="row">
+                                <div class="col-md-8 col-8">
+                                    <div class="form-group mb-0">
+                                        <label for="number">Account number</label>
+                                        <input type="text" class="form-control" id="number" name="account-number">
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-4 d-flex align-items-end">
+                                    <button type="submit" class="btn bg--dark-green">Add</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="mb-4">Energy account</h3>
+                <div class="row mb-5">
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="ge__account__detail__box mb-4 mb-md-0 d-flex flex-column justify-content-between ge-rounded bg-white p-4">
+                            <div class="ge__account__detail__box__info">
+                                <h4 class="mb-4">Contact details</h4>
+                                <ul class="list-unstyled mb-0">
+                                    <li><a class="text-dark-grey text-sm" href="mailto:luke@wearebwi.com">luke@wearebwi.com</a></li>
+                                    <li><a class="text-dark-grey text-sm" href="tel:01481723456">01481723456</a></li>
+                                </ul>
+                            </div>
+                            <ul class="ge__account__detail__box__actions list-unstyled mt-5 mb-0">
+                                <li>
+                                    <a href="./account-details-edit.html" class="green--link text-sm">Edit</a>
+                                </li>
+                                <li>
+                                    <a href="./change-password.html" class="green--link text-sm">Change password</a>
+                                </li>
+                                <li>
+                                    <a href="./newsletter.html" class="green--link text-sm">Marketing preferences</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="ge__account__detail__box mb-4 mb-md-0 d-flex flex-column justify-content-between ge-rounded bg-white p-4">
+                            <div class="ge__account__detail__box__info">
+                                <h4 class="mb-4">Energy supply address</h4>
+                                <ul class="list-unstyled mb-0">
+                                    <li class="mb-2"><a class="text-dark-grey text-sm duplicate-soft-medium" href="#">Luke Carré</a></li>
+                                    <li>
+                                        <address class="text-dark-grey text-sm">
+                                            Home Address<br />
+                                            55 Le Bordage<br /> 
+                                            St Peter Port, Guernsey<br /> 
+                                            GY1 1BP
+                                        </address>
+                                    </li>
+                                </ul>
+                            </div>
+                            <ul class="ge__account__detail__box__actions list-unstyled mt-5 mb-0">
+                                <li>
+                                    <a href="./delivery-addresses.html" class="green--link text-sm">Moving home</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="ge__account__detail__box mb-4 mb-md-0 d-flex flex-column justify-content-between ge-rounded bg--dark p-4">
+                            <div class="ge__account__detail__box__info">
+                                <h4 class="mb-0 text--dark-green">Payment method</h4>
+                                <h4 class="text-white mb-2">Invoice</h4>
+                                <p class="text-xs text-mid-grey">We send you an invoice online every two months</p>
+                            </div>
+                            <ul class="ge__account__detail__box__actions list-unstyled mt-5 mb-0">
+                                <li class="mb-3">
+                                    <a href="#" class="white--link text-sm">View you bills</a>
+                                    <a href="#" class="white--link text-sm ms-3">Switch to e-billing</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="btn btn-sm btn-ouline-white">Change payment method</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="mb-4">Online shopping</h3>
+                <div class="row mb-5">
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="ge__account__detail__box mb-4 mb-md-0 d-flex flex-column justify-content-between ge-rounded bg-white p-4">
                             <div class="ge__account__detail__box__info">
                                 <h4 class="mb-4">Delivery address</h4>
                                 <ul class="list-unstyled mb-0">
@@ -242,7 +370,102 @@
                             </div>
                             <ul class="ge__account__detail__box__actions list-unstyled mt-5 mb-0">
                                 <li>
-                                    <a href="./delivery-addresses.html" class="text--dark-green text-sm">Manage delivery addresses</a>
+                                    <a href="./delivery-addresses.html" class="green--link text-sm">Manage delivery addresses</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="ge__account__detail__box mb-4 mb-md-0 d-flex flex-column justify-content-between ge-rounded bg-white p-4">
+                            <div class="ge__account__detail__box__info">
+                                <h4 class="mb-4">Billing address</h4>
+                                <ul class="list-unstyled mb-0">
+                                    <li class="mb-2"><a class="text-dark-grey text-sm duplicate-soft-medium" href="#">Piet Whitehorne</a></li>
+                                    <li>
+                                        <address class="text-dark-grey text-sm">
+                                            Home Address<br />
+                                            55 Le Bordage<br /> 
+                                            St Peter Port, Guernsey<br /> 
+                                            GY1 1BP
+                                        </address>
+                                    </li>
+                                    <li><a class="text-dark-grey text-sm" href="tel:07781411253">07781411253</a></li>
+                                </ul>
+                            </div>
+                            <ul class="ge__account__detail__box__actions list-unstyled mt-5 mb-0">
+                                <li>
+                                    <a href="./delivery-addresses.html" class="green--link text-sm">Manage delivery addresses</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="ge__account__detail__box mb-4 mb-md-0 d-flex flex-column justify-content-between ge-rounded bg-white p-4">
+                            <div class="ge__account__detail__box__info">
+                                <h4 class="mb-4">Saved payment card</h4>
+                                <ul class="list-unstyled mb-0">
+                                    <li class="mb-2"><a class="text-dark-grey text-sm duplicate-soft-medium" href="#">Mr L J Carre</a></li>
+                                    <li class="text-dark-grey text-sm">
+                                        Debit Card<br />
+                                        •••• •••• •••• 1020<br />
+                                        12/2028
+                                    </li>
+                                </ul>
+                            </div>
+                            <ul class="ge__account__detail__box__actions list-unstyled mt-5 mb-0">
+                                <li>
+                                    <a href="#" class="green--link text-sm">Manage payment cards</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="mb-4">Address</h3>
+                <div class="row mb-5">
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="ge__account__detail__box mb-4 mb-md-0 d-flex flex-column justify-content-between ge-rounded bg-white p-4">
+                            <div class="ge__account__detail__box__info">
+                                <h4 class="mb-4">Your details</h4>
+                                <ul class="list-unstyled mb-0">
+                                    <li><a class="text-dark-grey text-sm" href="#">Luke Carré</a></li>
+                                    <li><a class="text-dark-grey text-sm" href="mailto:luke@wearebwi.com">luke@wearebwi.com</a></li>
+                                    <li><a class="text-dark-grey text-sm" href="tel:01481723456">01481723456</a></li>
+                                </ul>
+                            </div>
+                            <ul class="ge__account__detail__box__actions list-unstyled mt-5 mb-0">
+                                <li>
+                                    <a href="./account-details-edit.html" class="green--link text-sm">Edit details</a>
+                                </li>
+                                <li>
+                                    <a href="./change-password.html" class="green--link text-sm">Change password</a>
+                                </li>
+                                <li>
+                                    <a href="./newsletter.html" class="green--link text-sm">Marketing preferences</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="ge__account__detail__box mb-4 mb-md-0 d-flex flex-column justify-content-between ge-rounded bg-white p-4">
+                            <div class="ge__account__detail__box__info">
+                                <h4 class="mb-4">Delivery address</h4>
+                                <ul class="list-unstyled mb-0">
+                                    <li class="mb-2"><a class="text-dark-grey text-sm duplicate-soft-medium" href="#">Luke Carré</a></li>
+                                    <li>
+                                        <address class="text-dark-grey text-sm">
+                                            Home Address<br />
+                                            55 Le Bordage<br /> 
+                                            St Peter Port, Guernsey<br /> 
+                                            GY1 1BP
+                                        </address>
+                                    </li>
+                                    <li><a class="text-dark-grey text-sm" href="tel:07781411253">07781411253</a></li>
+                                </ul>
+                            </div>
+                            <ul class="ge__account__detail__box__actions list-unstyled mt-5 mb-0">
+                                <li>
+                                    <a href="./delivery-addresses.html" class="green--link text-sm">Manage delivery addresses</a>
                                 </li>
                             </ul>
                         </div>

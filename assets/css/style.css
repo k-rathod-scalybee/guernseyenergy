@@ -1,11 +1,22 @@
 :root {
   --primary-color: #292935;
   --dark-green-color: #70B483;
+  --dark-green-rgb: 112, 180, 131;
+
   --light-green-color: #CCDE91;
   --red-color: #D24C4C;
+  --dark-red-rgb: 210, 76, 76;
+
+  --yellow-color: #EAC95E;
+
+  --turquoise-color: #67B4B8;
   --dark-red-color: #D45252;
+
   --dark-grey-color: #5E6A6F;
   --grey-color: #F3F3F3;
+  --light-mid-grey: #DFDDE0;
+
+  --azureish-white-color: #D4E9ED;
   --light-grey-color: #F3F1F3;
   --mid-grey-color: #979EA2;
   --linear-gradient-color: linear-gradient(90deg, #84BCC3 0%, #68ADB0 27.6%, #6FB482 64.06%, #92B661 100%);
@@ -112,15 +123,22 @@ p:not(:last-child) {
   font-size: 0.895rem;
 }
 .btn-white {
-  background-color: #fff;
+  background-color: #ffffff;
   color: var(--primary-color);
+  border-color: #ffffff;
 }
 .btn-dark-green {
   background-color: var(--dark-green-color);
+  border-color: var(--dark-green-color);
 }
 .btn-ouline-grey {
   background-color: transparent;
   border: 2px solid #B8B8C0;
+  color: var(--primary-color);
+}
+.btn-ouline-dark {
+  background-color: transparent;
+  border: 2px solid var(--primary-color);
   color: var(--primary-color);
 }
 .btn-ouline-white {
@@ -136,42 +154,54 @@ p:not(:last-child) {
   -o-transition: all 0.6s ease-in-out;
   transition: all 0.6s ease-in-out;
 }
-.btn-ouline-white:hover,
+.btn-ouline-white:hover {
+  background-color: var(--dark-green-color);
+  border-color: var(--dark-green-color);
+}
 .btn-dark-green:hover {
   background-color: var(--primary-color);
   border-color: var(--primary-color);
 }
 .btn-gradient {
   background: var(--linear-gradient-color);
+  border-color: transparent;
 }
 .btn-gradient:hover {
   background: linear-gradient(90deg, #84BCC3 100%, #68ADB0 60%, #6FB482 20%, #92B661 0%);
+}
+.btn-light-grey {
+  background-color: var(--light-grey-color);
+  border-color: var(--light-grey-color);
+  color: var(--primary-color);
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "DuplicateSoft-Medium-Web";
   font-weight: 500;
 }
-h1 {
+h1, .h1 {
   font-size: 2.316rem; /* 44px */
 }
-h2 {
+h2, .h2 {
   font-size: 2rem; /* 38px */
 }
-h3 {
+h3, .h3 {
   font-size: 1.684rem; /* 32px */
 }
-h4 {
+h4, .h4 {
   font-size: 1.368rem; /* 26px */
 }
-h5 {
+h5, .h5 {
   font-size: 1.158rem; /* 22px */
 }
-h6 {
+h6, .h6 {
   font-size: 1rem; /* 19px */
 }
 .text-sm {
   font-size: 0.895rem; /* 17px */
+}
+.text-xs {
+  font-size: 0.789rem; /* 15px */
 }
 .small, small {
   font-size: 0.684rem;
@@ -215,7 +245,7 @@ label small {
 .form-control {
   font-family: "DuplicateSoft-Regular-Web";
   font-weight: 400;
-  border: 1.5px solid #DFDDE0;
+  border: 1.5px solid var(--light-mid-grey);
   color: var(--primary-color);
   font-size: 0.895rem;
   padding: 1rem 0.842rem;
@@ -255,6 +285,23 @@ label small {
   width: 1.053rem;
   height: 1.053rem;
 }
+.p-40 {
+  padding: 2.105rem;
+}
+
+.input-wrapper-amout span {
+  font-family: "DuplicateSoft-Medium-Web";
+  font-weight: 500;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0.842rem;
+  right: auto;
+  bottom: auto;
+}
+.input-wrapper-amout .form-control {
+  padding-left: 1.684rem;
+}
 
 /* Colors */
 .text--dark {
@@ -268,6 +315,9 @@ label small {
 }
 .text--dark-green {
   color: var(--dark-green-color);
+}
+.text--turquoise {
+  color: var(--turquoise-color);
 }
 .text--red {
   color: var(--red-color);
@@ -284,6 +334,14 @@ label small {
 .bg--dark-green {
   background-color: var(--dark-green-color);
 }
+.bg--dark-green01 {
+  --bs-bg-opacity: 0.1;
+  background-color: rgba(var(--dark-green-rgb),var(--bs-bg-opacity))!important;
+}
+.bg--red01 {
+  --bs-bg-opacity: 0.1;
+  background-color: rgba(var(--dark-red-rgb),var(--bs-bg-opacity))!important;
+}
 .bg--light-green {
   background-color: var(--light-green-color);
 }
@@ -296,10 +354,163 @@ label small {
 .bg--light-grey {
   background-color: var(--light-grey-color);
 }
+.bg--red {
+  background-color: var(--red-color);
+}
 .bg--dark-red {
   background-color: var(--dark-red-color);
 }
+.bg--turquoise {
+  background-color: var(--turquoise-color);
+}
+.bg--azureish-white {
+  background-color: var(--azureish-white-color);
+}
+.bg--yellow {
+  background-color: var(--yellow-color);
+}
 /* Colors */
+
+/* Components */
+.ge__card {
+  border: 2px solid var(--light-grey-color);
+  border-radius: 16px;
+  padding: 1.263rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.ge__card .ge__card__footer {
+  margin-top: 1.947rem;
+}
+.text-decoration-underline {
+  text-underline-offset: 0.263rem;
+}
+
+.amount-large {
+  font-size: 2.947rem;
+}
+.amount-large span {
+  font-size: 2rem;
+}
+
+.arrow-link svg {
+  width: 1.684rem;
+  height: 1.684rem;
+}
+
+.primary--link {
+  color: var(--primary-color);
+  text-decoration: underline;
+  text-underline-offset: 0.263rem;
+}
+.green--link {
+  color: var(--dark-green-color);
+  text-decoration: underline;
+  text-underline-offset: 0.263rem;
+}
+.white--link {
+  color: #ffffff;
+  text-decoration: underline;
+  text-underline-offset: 0.263rem;
+}
+
+.ge__info__alert {
+  color: var(--dark-grey-color);
+  font-size: 0.842rem;
+  border: 2px solid #70B483;
+  border-radius: 0.842rem;
+  padding: 0.632rem 0.842rem;
+  display: flex;
+  align-items: center;
+}
+
+.gradient-border-box {
+  background-repeat: no-repeat;
+  border: 2px solid;
+  background: linear-gradient(#FFF, #FFF) padding-box right,linear-gradient(90deg, #84BCC3 0%, #68ADB0 27.6%, #6FB482 64.06%, #92B661 100%) border-box;
+  border-image-source: linear-gradient(90deg, #84BCC3 0%, #68ADB0 27.6%, #6FB482 64.06%, #92B661 100%);
+}
+
+.ge__plans__card {
+  background-color: #ffffff;
+  padding: 1.684rem;
+  border-radius: 0.842rem;
+  display: flex;
+}
+.ge__plans__card__icon {
+  margin-right: 1.579rem;
+  width: 5%;
+}
+.ge__plans__card__icon img {
+  width: 2.421rem;
+}
+.ge__plans__card__details {
+  display: flex;
+  width: 73%;
+}
+.ge__plans__card__des {
+  position: relative;
+  border-left: 2px solid var(--light-mid-grey);
+  padding-left: 2.105rem;
+  padding-right: 1rem;
+  margin-left: 2.105rem;
+}
+.ge__plans__card__actions {
+  width: 22%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: flex-end;
+}
+.ge__plans__card__actions .btn {
+  margin-top: 0.632rem;
+}
+@media (max-width: 991px) {
+  .ge__plans__card {
+    flex-direction: column;
+  }
+  .ge__plans__card__icon {
+    margin: 0 0 1rem;
+    width: 100%;
+  }
+  .ge__plans__card__details {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  .ge__plans__card__actions {
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+  }
+  .ge__plans__card__actions .btn {
+    margin: 0 0 0 1rem;
+  }
+}
+@media (max-width: 575px) {
+  .ge__plans__card__details,
+  .ge__plans__card__actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .ge__plans__card__details > div {
+    width: 100%;
+  }
+  .ge__plans__card__des {
+    border-left: none;
+    border-top: 1px solid var(--light-mid-grey);
+    padding: 1.5rem 0 0;
+    margin: 1.5rem 0 0;
+  }
+  .ge__plans__card__actions .btn {
+    margin: 0.7rem 0 0 0;
+  }
+  .ge__plans__card__actions .primary--link {
+    margin-bottom: 0.4rem;
+  }
+}
+/* Components */
 
 /* Header CSS */
 
@@ -337,6 +548,7 @@ header.fixed-top {
   letter-spacing: 0.02rem;
   padding: 0.526rem 1.053rem;
   display: block;
+  border: none;
 }
 .ge-header__top__links li a {
   padding: 0;
@@ -350,6 +562,8 @@ header.fixed-top {
 .ge-header__top li .btn {
   padding: 0.211rem 0.684rem;
   border-radius: 0.842rem;
+  font-family: "DuplicateSoft-Regular-Web";
+  font-weight: 400;
 }
 /* Header Top CSS */
 
@@ -391,7 +605,7 @@ header.fixed-top {
 .ge-header__menu .dropdown-menu {
   width: 12rem;
   border: none;
-  background: #292935;
+  background: var(--primary-color);
   border-radius: 0 0.842rem 0.842rem 0.842rem;
   padding: 0.632rem 1.263rem;
   margin-top: 0;
@@ -422,7 +636,7 @@ header.fixed-top {
 .ge-header__actions li:not(:last-child) {
   margin-right: 1.263rem;
 }
-.ge-header__actions li a {
+.ge-header__actions li > a {
   color: var(--primary-color);
   font-family: "DuplicateSoft-Medium-Web";
   font-weight: 500;
@@ -431,7 +645,7 @@ header.fixed-top {
   padding: 1.579rem 0 1.316rem;
   display: block;
 }
-.ge-header__actions li a:after {
+.ge-header__actions li > a:after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -443,9 +657,20 @@ header.fixed-top {
   opacity: 0;
   visibility: hidden;
 }
-.ge-header__actions li a.active:after {
+.ge-header__actions li > a.active:after {
   opacity: 1;
   visibility: visible;
+}
+
+.account-dropdown-menu {
+    width: 15.789rem;
+    padding: 1.263rem 1.211rem;
+    border: none;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+.account-dropdown-menu .btn:not(:last-child) {
+  margin-bottom: 0.632rem;
 }
 /* Header Menu CSS */
 
@@ -580,7 +805,7 @@ header.fixed-top {
   color: var(--dark-green-color);
 }
 .dropdown-item .notification-time {
-  border-left: 1.5px solid #DFDDE0;
+  border-left: 1.5px solid var(--light-mid-grey);
   padding-left: 1.263rem;
   margin-left: 2.632rem;
   min-width: max-content;
@@ -599,11 +824,22 @@ header.fixed-top {
   background-size: cover;
 }
 .ge__alert {
-  margin-bottom: 0.842rem;
   padding: 1.474rem 1.684rem;
+  margin-bottom: 0.842rem;
+  position: relative;
+  overflow: hidden;
+}
+.ge__alert__offer__banner {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 27%;
+  height: auto;
+  right: 20%;
 }
 .ge__alert__des {
   width: 100%;
+  z-index: 1;
 }
 .ge__alert-small {
   padding: 0.842rem 1.263rem;
@@ -636,16 +872,28 @@ header.fixed-top {
   font-size: 0.842rem;
 }
 
-.ge__account__link__box {
-  padding: 2.895rem 2.368rem;
+.ge__account__balance__box,
+.ge__account__link__row {
   height: 100%;
+}
+.ge__account__link__box {
+  padding: 2.2rem 2.368rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.ge__account__link__box.link__box-1,
+.ge__account__link__box.link__box-2 {
+  height: calc(100% - 0.842rem);
+  margin-bottom: 0.842rem;
 }
 /* Account Page CSS */
 
 /* Delivery address Page CSS */
 .delivery-address-item .form-check-label {
   background-color: #FFFFFF;
-  border: 2px solid #DFDDE0;
+  border: 2px solid var(--light-mid-grey);
   border-radius: 0.421rem;
   padding: 1.789rem 1.263rem;
   display: block;
@@ -656,7 +904,7 @@ header.fixed-top {
   right: 0.421rem;
   width: 1.368rem;
   height: 1.368rem;
-  border: 2px solid #DFDDE0;
+  border: 2px solid var(--light-mid-grey);
   margin: 0;
   cursor: pointer;
 }
@@ -673,15 +921,30 @@ header.fixed-top {
 .ge__offers {
   margin-top: 70px;
 }
+.ge__offers__list {
+  position: relative;
+  padding-bottom: 30px;
+  overflow: hidden;
+  --bs-gutter-x: 1.5rem;
+  padding-right: calc(var(--bs-gutter-x) * .5);
+  padding-left: calc(var(--bs-gutter-x) * .5);
+}
+.ge__offers__list .swiper-scrollbar {
+  bottom: 0 !important;
+  left: calc((100% - var(--containerWidth)) / 2);
+  right: calc((100% - var(--containerWidth)) / 2);
+  height: 5px;
+  background-color: #ffffff;
+}
 @media (min-width: 576px) {
   .ge__offers__list {
-    --containerWidth: 680px;
+    --containerWidth: 520px;
     padding-left: calc((100% - var(--containerWidth)) / 2);
   }
 }
 @media (min-width: 768px) {
   .ge__offers__list {
-    --containerWidth: 680px;
+    --containerWidth: 700px;
     padding-left: calc((100% - var(--containerWidth)) / 2);
   }
 }
@@ -703,24 +966,13 @@ header.fixed-top {
     padding-left: calc((100% - var(--containerWidth)) / 2);
   }
 }
-.ge__offers__list {
-  position: relative;
-  padding-bottom: 30px;
-  overflow: hidden;
-}
-.ge__offers__list .swiper-scrollbar {
-  bottom: 0 !important;
-  left: calc((100% - var(--containerWidth)) / 2);
-  right: calc((100% - var(--containerWidth)) / 2);
-  height: 5px;
-  background-color: #ffffff;
-}
 .ge__offers__list .swiper-scrollbar .swiper-scrollbar-drag {
   background-color: #D9D9D9;
   cursor: pointer;
 }
 .ge__offer__product {
-  width: 27.8%;
+  width: 28.9%;
+  height: auto;
   flex: 0 0 auto;
   z-index: 1;
 }
@@ -739,6 +991,34 @@ header.fixed-top {
   bottom: 0;
   object-fit: cover;
 }
+.ge__product__box {
+  padding: 2.105rem 1.316rem 1.263rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.ge__product__box .ge__product__info {
+  margin-top: 1.579rem;
+}
+.ge__plan__header .info {
+  width: 13.158rem;
+}
+.ge__circle__link {
+  width: 3.158rem;
+  height: 3.158rem;
+  background-color: #ffffff;
+  color: var(--mid-grey-color);
+  display: block;
+  border-radius: 50%;
+  text-align: center;
+  font-family: "DuplicateSoft-Medium-Web" !important;
+  font-weight: 500 !important;
+  font-size: 0.789rem;
+  line-height: 1;
+  padding: 0.158rem;
+}
+
 .linear-gradient-overlay:after {
   content: "";
   position: absolute;
@@ -784,10 +1064,10 @@ header.fixed-top {
 .nav-tabs .nav-link {
   font-family: "DuplicateSoft-Medium-Web";
   font-weight: 500;
-  font-size: 17px;
+  font-size: 0.895rem;
   color: var(--primary-color);
   border: 2px solid #ffffff;
-  border-radius: 16px 16px 0 0;
+  border-radius: 0.842rem 0.842rem 0 0;
   padding: 0.947rem 1.684rem;
 }
 .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
@@ -798,23 +1078,173 @@ header.fixed-top {
   border-color: var(--light-green-color);
 }
 .ge__account__order__tab .tab-pane {
-  padding: 27px;
-  border-radius: 0 16px 16px 16px;
+  padding: 1.421rem;
+  border-radius: 0 0.842rem 0.842rem 0.842rem;
 }
 .table tfoot tr td {
-  padding: 8px 0;
+  padding: 0.421rem 0;
   border: none;
 }
 .table tfoot tr:first-child td {
   border-top: 2px solid var(--light-grey-color);
-  padding-top: 32px;
+  padding-top: 1.684rem;
+}
+
+.table-sm th, .table-sm td {
+  border-bottom: 2px solid var(--light-grey-color);
+  padding: 10px 0;
+}
+.table-sm tr:last-child th,
+.table-sm tr:last-child td {
+  border: none;
 }
 /* Order Page CSS */
+
+/* Bills Page CSS */
+.filter-year-select {
+  display: flex;
+  align-items: center;
+}
+.filter-year-select label {
+  font-family: "DuplicateSoft-Regular-Web";
+  font-weight: 400;
+  font-size: 0.895rem;
+  color: var(--dark-grey-color);
+  margin-right: 0.842rem;
+  margin-bottom: 0;
+}
+.filter-year-select .select-wrapper {
+  position: relative; 
+}
+.filter-year-select .select-wrapper:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 2.105rem;
+  height: 1.632rem;
+  border-left: 1.5px solid var(--light-mid-grey);
+}
+.filter-year-select .select-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0.842rem;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0.368rem 0.263rem 0 0.263rem;
+  border-color: var(--dark-green-color) transparent transparent transparent;
+  border-radius: 1px;
+}
+.filter-year-select .form-control {
+  min-width: 10.526rem;
+  padding: 0.842rem;
+}
+
+.ge__bill__item {
+  padding: 1.316rem 1.684rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.ge__bill__item:not(:last-child) {
+  margin-bottom: 0.632rem;
+}
+.ge__bill__actions {
+  display: flex;
+  align-items: center;
+}
+.ge__bill__actions .download {
+  position: relative;
+  display: block;
+  margin-left: 1.684rem;
+  padding-left: 1.684rem;
+}
+.ge__bill__actions .download::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: 0.105rem;
+  height: 3.158rem;
+  background-color: var(--light-mid-grey);
+  border-radius: 0.789rem;
+}
+.ge__bill__actions img {
+  width: 1.263rem;
+  height: 1.263rem;
+}
+
+.ge__bills__sidebar {
+  padding-left: 2.105rem;
+  margin-left: 1.368rem;
+  border-left: 1.5px solid var(--light-mid-grey);
+  height: 100%;
+}
+.ge__bills__sidebar__item:not(:last-child) {
+  margin-bottom: 0.632rem;
+}
+/* Bills Page CSS */
+
+/* Direct Debit Page CSS */
+.fd__debit__update__box .close {
+  position: absolute;
+  top: 1rem;
+  left: auto;
+  right: 1rem;
+  bottom: auto;
+  cursor: pointer;
+}
+.fd__debit__update__box h6 img {
+  width: 1.421rem;
+  height: 1.421rem;
+}
+.fd__debit__select__amount {
+  margin: 0 2.2rem 2rem;
+}
+.fd__debit__select__amount .amount {
+  border: 2px solid #FFFFFF;
+  border-radius: 16px;
+  padding: 0.368rem 1.158rem;
+  text-align: center;
+}
+
+.update-amount-modal .modal-content {
+  border-radius: 16px;
+}
+.update-amount-modal .modal-body {
+  padding: 4rem 3.368rem;
+}
+.update-amount-modal .btn-close {
+  position: absolute;
+  top: 1.684rem;
+  right: 1.684rem;
+  width: 1.684rem;
+  height: 1.684rem;
+  background: var(--light-grey-color) url('../images/icons/x-green.svg') center / 0.737rem no-repeat;
+  border-radius: 50%;
+  opacity: 1;
+  z-index: 1;
+}
+.update-amount-modal .amount-update {
+  border: 2px solid var(--light-mid-grey);
+  border-radius: 16px;
+  padding: 0.526rem 1.053rem;
+}
+@media (min-width: 576px) {
+  .update-amount-modal {
+    --bs-modal-width: 600px
+  }
+}
+/* Direct Debit Page CSS */
 
 /* Table CSS */
 .table tr th, .table tr td {
   vertical-align: middle;
-  font-size: 17px;
+  font-size: 0.895rem;
   font-family: "DuplicateSoft-Medium-Web";
   font-weight: 500;
   box-shadow: none;
@@ -839,7 +1269,7 @@ header.fixed-top {
 }
 .table tr td .btn {
   padding: 9px 63px;
-  font-size: 17px;
+  font-size: 0.895rem;
 }
 .order__total__table {
   border-top: 2px solid var(--light-grey-color);
@@ -848,7 +1278,7 @@ header.fixed-top {
 .order__total__table tr td {
   border: none;
   padding: 10px 0 8px 30px;
-  font-size: 17px;
+  font-size: 0.895rem;
 }
 @media (max-width: 991px) {
   .order__table {
@@ -962,12 +1392,32 @@ header.fixed-top {
 /* Footer CSS */
 
 /* Responsive CSS */
+@media (max-width: 1440px) {
+  /* Offers Block CSS */
+  .ge__offer__product {
+    width: 30.8%;
+  }
+  /* Offers Block CSS */
+}
 @media (max-width: 1399px) {
   /* Account Page CSS */
   .ge__account__link__box {
     padding: 2.895rem 1.8rem;
   }
   /* Account Page CSS */
+
+  /* Offers Block CSS */
+  .ge__offer__product__image {
+    padding-top: 85%;
+  }
+  /* Offers Block CSS */
+
+  /* Bills Page CSS */
+  .ge__bills__sidebar {
+    padding-left: 1.3rem;
+    margin-left: 0.6rem;
+  }
+  /* Bills Page CSS */
 
   /* Footer CSS */
   .footer__company__info {
@@ -983,11 +1433,17 @@ header.fixed-top {
 
   /* Account Page CSS */
   .ge__account__cta h1 { width: 100%; }
+  .ge__account__link__box {
+    padding: 2.8rem 1.8rem;
+  }
   /* Account Page CSS */
 
   /* Offers Block CSS */
   .ge__offer__product {
     width: 39%;
+  }
+  .ge__offer__product__image {
+    padding-top: 75%;
   }
   /* Offers Block CSS */
 
@@ -1071,14 +1527,29 @@ header.fixed-top {
 
   /* Header CSS */
 
+  /* Offers Block CSS */
+  .ge__offer__product {
+    width: 45%;
+  }
+  .ge__product__icon img {
+    width: auto;
+    height: 90px;
+  }
+  /* Offers Block CSS */
+
   /* Account Page CSS */
   .ge__account__cta {
     padding: 3.357rem 2rem;
   }
   .ge__account__link__box {
     padding: 2.5rem 1.5rem;
+  }
+
+  .ge__account__balance__box, .ge__account__link__row {
     height: auto;
-    margin-bottom: 16px;
+  }
+  .ge__account__balance__box {
+    margin-top: 1rem;
   }
   /* Account Page CSS */
 }
@@ -1107,8 +1578,22 @@ header.fixed-top {
   .btn-sm {
     font-size: 0.9rem;
   }
+  p.w-50 {
+    width: 100% !important;
+  }
 
   /* Header CSS */
+
+  /* Components */
+  .ge__card {
+    height: calc(100% - 1.2rem);
+    margin-bottom: 1.2rem;
+  }
+
+  .p-40 {
+    padding: 1.5rem;
+  }
+  /* Components */
 
   /* Authentication CSS */
   .ge-authentication__box {
@@ -1116,6 +1601,13 @@ header.fixed-top {
   }
   .ge__signin__icon {
     margin-top: -3.2rem;
+  }
+  .ge__alert__offer__banner {
+    top: auto;
+    bottom: -5px;
+    transform: none;
+    right: 0;
+    width: 150px;
   }
   /* Authentication CSS */
 
@@ -1125,13 +1617,14 @@ header.fixed-top {
     padding-right: 0.571rem;
   }
   .ge-header__top__links li:not(:last-child),
-  .ge-header__actions li a:after {
+  .ge-header__actions li > a:after {
     display: none;
   }
-  .ge-header__actions li a {
+  .ge-header__actions li > a {
     font-size: 0.8rem;
   }
   .nav-item-mobile { display: block; }
+  .nav-item-mobile a { border: none; }
   /* Header Top CSS */
 
   /* Header Menu CSS */
@@ -1184,12 +1677,17 @@ header.fixed-top {
   }
 
   .ge__account__link__box {
-    padding: 4.5rem 1.5rem;
-    height: auto;
-    margin-bottom: 16px;
+    padding: 2rem 1rem;
   }
   .ge__account__link__box h2 {
     font-size: 22px;
+  }
+  .ge__account__link__box img {
+    width: auto;
+    height: 2.5rem;
+  }
+  .ge__account__link__box h5 {
+    font-size: 1.3rem;
   }
 
   .notification-dropdown-menu {
@@ -1222,20 +1720,70 @@ header.fixed-top {
 
   /* Offers Block CSS */
   .ge__offer__product {
-    width: 100%;
-  }
-  .ge__offers__list {
-    width: 100%;
-    padding-right: calc(1.5rem * .5);
-    padding-left: calc(1.5rem * .5);
-    margin-right: auto;
-    margin-left: auto;
-  }
-  .ge__offers__list .swiper-scrollbar {
-    left: calc(1.5rem * .5);
-    width: calc(100% - 1.5rem);
+    width: 55%;
   }
   /* Offers Block CSS */
+
+  /* Bills Page CSS */
+  .ge__bills__sidebar {
+    padding: 2rem 0 0;
+    margin: 2.5rem 0 0;
+    border-left: none;
+    border-top: 1px solid var(--light-mid-grey);
+    height: auto;
+  }
+  .filter-year-select {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .filter-year-select label {
+    margin: 0 0 0.3rem;
+  }
+
+  .ge__bill__item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .ge__bill__info p {
+    margin-top: 0.5rem;
+  }
+  .ge__bill__info p img {
+    width: 1.2rem;
+  }
+  .ge__bill__actions {
+    margin-top: 2rem;
+  }
+  .ge__bill__actions .download {
+    margin-left: 1rem;
+    padding-left: 1rem;
+  }
+  .ge__bill__actions .download::before {
+    height: 2rem;
+  }
+  /* Bills Page CSS */
+
+  /* Direct Debit Page CSS */
+  .fd__debit__update__box {
+    padding-top: 2.5rem !important;
+  }
+  .fd__debit__select__amount .col-md-6.text-end {
+    text-align: center !important;
+    margin-top: 0.7rem;
+  }
+  .update-amount-modal .modal-body {
+    padding: 4rem 1.5rem 3rem;
+  }
+  .update-amount-modal .btn-close {
+    top: 1rem;
+    right: 1rem;
+  }
+  .update-amount-modal .amount-update img {
+    margin: 0 1rem;
+  }
+  .update-amount-modal .amount-update h2 {
+    font-size: 2.2rem;
+  }
+  /* Direct Debit Page CSS */
 
   /* Footer CSS */
   .footer {
@@ -1257,15 +1805,25 @@ header.fixed-top {
 }
 @media (min-width: 576px) {
   .ge__account__detail__box {
-    height: 100%;
+    height: calc(100% - 1.5rem);
+    margin-bottom: 1.5rem !important;
   }
 }
-@media (max-width: 480px) {
+@media (max-width: 575px) {
   /* Header CSS */
   .ge-header__top li a {
     padding: 0.5rem 0.8rem;
   }
   /* Header CSS */
+
+  /* Offers Block CSS */
+  .ge__offer__product {
+    width: 85%;
+  }
+  .ge__account__link__box h5 {
+    font-size: 1.2rem;
+  }
+  /* Offers Block CSS */
 }
 @media (max-width: 360px) {
   .ge__account__hero__actions li:not(:last-child) {
@@ -1285,5 +1843,24 @@ header.fixed-top {
     padding: 5rem 0;
   }
   /* Footer CSS */
+}
+@media (max-width: 320px) {
+  /* Offers Block CSS */
+  .ge__offer__product {
+    width: 90%;
+  }
+  /* Offers Block CSS */
+
+  /* Direct Debit Page CSS */
+  .fd__debit__select__amount {
+    margin: 0 0 1.5rem;
+  }
+  .update-amount-modal .amount-update h2 {
+    font-size: 2rem;
+  }
+  .update-amount-modal .amount-update img {
+    width: 1rem;
+  }
+  /* Direct Debit Page CSS */
 }
 /* Responsive CSS */

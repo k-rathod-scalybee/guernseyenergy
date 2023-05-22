@@ -2,11 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="title" content="Guernsey Energy business customers">
-    <meta name="description" content="Guernsey Energy provides tailor-made energy solutions for local businesses. Contact our team for a free energy consultation.">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guernsey | Account</title>
+    <title>Guernsey | Account Details</title>
     <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon" />
     <!-- Bootstrap CSS 5.2 CND -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
@@ -135,9 +133,9 @@
     <!-- Main Block -->
     <main>
         <!-- Account Info Block -->
-        <section class="ge__account__dash" style="background-image: url('./assets/images/header-banner/hero-banner.svg');">
+        <section class="ge__account__dash ge__account__dash--small" style="background-image: url('./assets/images/header-banner/hero-banner-small.svg');">
             <div class="container">
-                <div class="row justify-content-between mb-4">
+                <div class="row align-items-md-center justify-content-between">
                     <div class="col-md-4 col-6">
                         <h2 class="duplicate-soft-regular mb-0 text-white">Hi Luke</h2>
                     </div>
@@ -191,103 +189,104 @@
                         </ul>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="ge__alert bg--dark ge-rounded d-flex align-items-md-center align-items-start">
-                            <div class="ge__alert__icon">
-                                <img src="./assets/images/icons/mobile-tick.svg" width="34" height="42" alt="Mobile">
-                            </div>
-                            <div class="ge__alert__des d-flex flex-column flex-md-row align-items-md-center align-items-start justify-content-between ms-3">
-                                <h5 class="text-white duplicate-soft-regular mb-3 mb-md-0">You’re eligible to <span class="duplicate-soft-medium">upgrade</span> to a <span class="duplicate-soft-medium">new smart boiler</span> from <span class="duplicate-soft-medium">£25 per month</span></h5>
-                                <a href="#" class="btn btn-sm btn-gradient">Find out more</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-xl-7 col-md-6 order-1 order-md-0">
-                        <div class="ge__account__cta bg--light-green ge-rounded position-relative">
-                            <h6 class="text-uppercase mb-2">Get connected</h6>
-                            <h1 class="mb-4">Switch from oil to gas and we’ll remove your old oil tank or boiler for free.</h1>
-                            <a href="#" class="btn btn-sm btn-white">Switch from oil to gas</a>
-                        </div>
-                    </div>
-                    <div class="col-xl-5 col-md-6 order-0 order-md-1">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="ge__account__link__box mb-3 mb-md-0 h-auto text-center bg-white ge-rounded">
-                                    <a href="./account-details.html" class="text--dark">
-                                        <img src="./assets/images/icons/user-linear-gradient.svg" width="42" height="47" alt="User">
-                                        <h5 class="mt-2 mb-0">Account details</h5>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="ge__account__link__box mb-3 mb-md-0 h-auto text-center bg-white ge-rounded">
-                                    <a href="./orders.html" class="text--dark">
-                                        <img src="./assets/images/icons/shopping-bag-linear-gradient.svg" width="41" height="43" alt="Your orders">
-                                        <h5 class="mt-2 mb-0">Your orders</h5>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </section>
         <!-- Account Info Block -->
 
-        <!-- Offer Block -->
-        <section class="ge__offers">
+        <!-- Your fixed direct debit Block -->
+        <section class="mt-4">
             <div class="container">
-                <h2 class="mb-4">Offers for you</h2>
-            </div>
-            <div class="ge__offers__list">
-                <div class="swiper-wrapper">
-                    <div class="ge__offer__product swiper-slide text-center ge-rounded overflow-hidden position-relative">
-                        <div class="ge__offer__product__image">
-                            <a href="#"><img src="./assets/images/products/product01.jpg" loading="lazy" width="480" height="360" alt="Product"></a>
+                <a href="./bills.html" class="go-back text--dark mb-2 d-inline-block"><img class="me-1 in-svg" src="./assets/images/icons/arrow-prev.svg" alt="Back"> Your bills</a>
+                <h2 class="mb-5">Your fixed direct debit</h2>
+
+                <div class="row">
+                    <div class="col-xxl-6 col-xl-7 col-lg-7 mb-3">
+                        <div class="bg-white ge-rounded p-4">
+                            <h6 class="mb-1">Current monthly direct debit</h6>
+                            <h1 class="amount-large duplicate-soft-regular">£350<span>.00</span></h1>
+
+                            <p class="small text-dark-grey d-flex mb-3"><img class="me-2" src="./assets/images/icons/info-i-yellow.svg" width="20" height="20" 
+                                loading="lazy" alt="Info"> If your next payment is due within 10 days, this new amount will not take effect until the following payment.</p>
+
+                            <a href="javascript: void(0);" class="btn btn-sm btn-ouline-dark btn-open-fd-box mt-3">Adjust amount</a>
+
+                            <div class="fd__debit__update__box bg--light-grey p-4 ge-rounded mt-4 position-relative" style="display: none;">
+                                <div class="close"><img src="./assets/images/icons/x-green.svg" alt="Close"></div>
+
+                                <h6 class="my-3 d-flex"><img class="me-2" src="./assets/images/icons/tick-rounded.svg" alt="Tick"> Switch to our new recommended direct debit amount</h6>
+
+                                <div class="fd__debit__select__amount">
+                                    <div class="row align-items-center mb-3">
+                                        <div class="col-md-6">
+                                            <div class="amount amount-large text--dark-green">£296<span>.00</span></div>
+                                        </div>
+                                        <div class="col-md-6 text-end">
+                                            <a href="#" class="btn btn-sm">Select this amount</a>
+                                        </div>
+                                    </div>
+
+                                    <p class="mb-0 small text-dark-grey">Our recommended figure is based on previous meter readings, giving you a consistent and accurate amount to cover your bills all year. This new amount will not take effect if updated within ten days of your next direct debit payment.</p>
+                                </div>
+
+                                <div class="bg-white rounded-2 p-4">
+                                    <h6 class="mb-3">Switch to our new recommended direct debit amount</h6>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <div class="input-wrapper-amout">
+                                                    <span>£</span>
+                                                    <input type="text" name="amount" class="form-control" placeholder="Enter amount">
+                                                </div>
+                                            </div>
+                                            <div class="form-group mb-0">
+                                                <button type="submit" class="btn btn-sm w-100" data-bs-toggle="modal" data-bs-target="#updateAmountModal">Updated amount</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <p class="text-dark-grey small mb-0 mt-2 mt-md-0">Please note: <span class="duplicate-soft-medium">£281.20</span> is the lowest amount you can pay. This amount may not cover your bills for the whole year.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="ge__offer__product__info">
-                            <h5 class="mb-3 duplicate-soft-regular text-white"><span class="duplicate-soft-medium">Upgrade</span> to a <span class="duplicate-soft-medium">new efficient boiler</span> from <span class="duplicate-soft-medium">£25 per month</span></h5>
-                            <a href="#" class="btn btn-sm btn-gradient">See boiler plans</a>
+                        <div class="bg-white ge-rounded p-3 text-sm text-dark-grey small mt-2 d-flex align-items-lg-center">
+                            <img class="me-2" src="./assets/images/icons/info-i.svg" width="20" height="20" loading="lazy" alt="Info">
+                            You’re next usage review will be on 24th July 2023
                         </div>
                     </div>
-                    <div class="ge__offer__product swiper-slide text-center ge-rounded overflow-hidden position-relative">
-                        <div class="ge__offer__product__image">
-                            <a href="#"><img src="./assets/images/products/product02.jpg" loading="lazy" width="480" height="360" alt="Product"></a>
-                        </div>
-                        <div class="ge__offer__product__info">
-                            <h5 class="mb-3 duplicate-soft-regular"><span class="duplicate-soft-medium">Save money on your energy.</span> Oh, that’s smart.</h5>
-                            <a href="#" class="btn btn-sm btn-gradient">Smart home</a>
+                    <div class="col-xl-5 col-lg-5">
+                        <div class="bg-white ge-rounded mb-3 p-4">
+                            <h4 class="mb-4">Your direct debit details</h4>
+
+                            <table class="table-sm w-100 mb-5">
+                                <tbody>
+                                    <tr>
+                                        <th class="duplicate-soft-medium text-dark-grey text-sm">Account holder</th>
+                                        <td class="text-sm duplicate-soft-medium text-end">Luke Carré</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="duplicate-soft-medium text-dark-grey text-sm">Account number</th>
+                                        <td class="text-sm duplicate-soft-medium text-end">****1088</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="duplicate-soft-medium text-dark-grey text-sm">Sort code</th>
+                                        <td class="text-sm duplicate-soft-medium text-end">20-61-29</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="duplicate-soft-medium text-dark-grey text-sm">Payment date</th>
+                                        <td class="text-sm duplicate-soft-medium text-end">25th of every month</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <a href="#" class="btn btn-sm btn-ouline-dark">Change Direct debit</a>
+                            <p class="text-dark-grey small mt-2 w-50 mb-0">Changes will not take effect if changed within ten days of your next direct debit payment.</p>
                         </div>
                     </div>
-                    <div class="ge__offer__product swiper-slide text-center ge-rounded overflow-hidden position-relative">
-                        <div class="ge__offer__badge bg--dark-green rounded-circle text-white text-center duplicate-soft-medium d-flex align-items-center justify-content-center">Sale now on</div>
-                        <div class="ge__offer__product__image">
-                            <a href="#"><img src="./assets/images/products/product03.jpg" loading="lazy" width="480" height="360" alt="Product"></a>
-                        </div>
-                        <div class="ge__offer__product__info">
-                            <h5 class="mb-3 text-white duplicate-soft-medium">Find the right vacuum for you</h5>
-                            <a href="#" class="btn btn-sm btn-white">Shop vacuums</a>
-                        </div>
-                    </div>
-                    <div class="ge__offer__product swiper-slide text-center ge-rounded overflow-hidden position-relative">
-                        <div class="ge__offer__product__image">
-                            <a href="#"><img src="./assets/images/products/product04.jpg" loading="lazy" width="480" height="360" alt="Product"></a>
-                        </div>
-                        <div class="ge__offer__product__info">
-                            <h5 class="mb-3 text-white duplicate-soft-medium">Bring the inside outside</h5>
-                            <a href="#" class="btn btn-sm btn-white">Outdoor living</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="swiper-scrollbar"></div>
                 </div>
             </div>
         </section>
-        <!-- Offer Block -->
+        <!-- Your fixed direct debit Block -->
     </main>
     <!-- Main Block -->
 
@@ -357,6 +356,33 @@
         </div>
     </footer>
     <!-- Footer Block -->
+  
+    <!-- Modal -->
+    <div class="update-amount-modal modal fade" data-bs-backdrop="static" data-bs-keyboard="false" id="updateAmountModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="modal-body">
+                    <h4 class="mb-4">Are you sure you want to adjust your fixed direct debit amount?</h4>
+
+                    <div class="amount-update d-flex align-items-center justify-content-between mb-3">
+                        <h2 class="amount-large duplicate-soft-regular mb-0">£350<span>.00</span></h2>
+                        <img src="./assets/images/icons/arrow-next-green.svg" width="33" height="19" loading="lazy" alt="Arrow">
+                        <h2 class="amount-large duplicate-soft-regular text--dark-green mb-0">£296<span>.00</span></h2>
+                    </div>
+
+                    <p class="small text-dark-grey d-flex mb-3"><img class="me-2" src="./assets/images/icons/info-i-yellow.svg" width="20" height="20" 
+                        loading="lazy" alt="Info"> If your next payment is due within 10 days, this new amount will not take effect until the following payment.</p>
+
+                    <div class="btn-actions d-flex gap-2 mt-5">
+                        <button type="button" class="btn btn-sm btn-ouline-dark" data-bs-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-sm btn-gradient">Confirm change</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- jQuery CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
@@ -367,5 +393,16 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <!-- Custom Script -->
     <script src="./assets/js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('.btn-open-fd-box').click(function() {
+                $('.fd__debit__update__box').slideDown("slow");
+            })
+            $('.fd__debit__update__box .close').click(function() {
+                $('.fd__debit__update__box').slideUp("slow");
+            })
+        })
+    </script>
 </body>
 </html>
